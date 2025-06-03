@@ -27,7 +27,7 @@ export default function Eventos() {
           <option value="">Todos los tipos</option>
           <option value="Tecnología">Tecnología</option>
           <option value="Cultura">Cultura</option>
-          <option value="Economía">Economía</option>
+          <option value="Economia">Economía</option>
           <option value="Derecho">Derecho</option>
         </select>
         <select value={modalidad} onChange={(e) => setModalidad(e.target.value)} className="p-2 border rounded">
