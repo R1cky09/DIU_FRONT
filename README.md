@@ -6,6 +6,10 @@ Proyecto en React para buscar, filtrar e inscribirse en eventos de la Universida
 
 ```bash
 git clone https://github.com/R1cky09/DIU-PROYECTO.git
-cd DIU-PROYECTO/client
+cd DIU-FRONT/client
 npm install
 npm start
+```
+
+## Integrantes
+
