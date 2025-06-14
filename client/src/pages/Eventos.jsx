@@ -6,11 +6,13 @@ export default function Eventos() {
   const [search, setSearch] = useState('');
   const [tipo, setTipo] = useState('');
   const [modalidad, setModalidad] = useState('');
+  const [Campus, setCampus] = useState('');
 
   const eventosFiltrados = eventos.filter(e =>
     e.titulo.toLowerCase().includes(search.toLowerCase()) &&
     (tipo ? e.tipo === tipo : true) &&
-    (modalidad ? e.modalidad === modalidad : true)
+    (modalidad ? e.modalidad === modalidad : true) &&
+    (Campus ? e.Campus === Campus : true)
   );
 
   return (
@@ -29,11 +31,20 @@ export default function Eventos() {
           <option value="Cultura">Cultura</option>
           <option value="Economia">Economía</option>
           <option value="Derecho">Derecho</option>
+          <option value="Ciencia">Ciencia</option>
+          <option value="Investigación">Investigación</option>
+          <option value="Otro">Otro</option>
         </select>
         <select value={modalidad} onChange={(e) => setModalidad(e.target.value)} className="p-2 border rounded">
           <option value="">Todas las modalidades</option>
           <option value="Online">Online</option>
           <option value="Presencial">Presencial</option>
+        </select>
+        <select value={Campus} onChange={(e) => setCampus(e.target.value)} className="p-2 border rounded">
+          <option value="">Campus</option>
+          <option value="Casa Central Valparaíso">Casa Central Valparaíso</option>
+          <option value="San Joaquín">San Joaquín</option>
+          <option value="Sede Viña del Mar">Sede Viña del Mar</option>
         </select>
       </div>
 

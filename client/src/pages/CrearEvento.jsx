@@ -51,6 +51,9 @@ export default function CrearEvento() {
           <option value="Cultura">Cultura</option>
           <option value="Economía">Economía</option>
           <option value="Derecho">Derecho</option>
+          <option value="Ciencia">Ciencia</option>
+          <option value="Investigación">Investigación</option>
+          <option value="Otro">Otro</option>
         </select>
 
         <select name="modalidad" onChange={handleChange} required className="w-full p-2 border rounded">
@@ -58,6 +61,14 @@ export default function CrearEvento() {
           <option value="online">Online</option>
           <option value="presencial">Presencial</option>
         </select>
+
+        <select name="Campus" onChange={handleChange} required className="w-full p-2 border rounded">
+          <option value="">Selecciona modalidad</option>
+          <option value="Casa Central Valparaíso ">Casa Central Valparaíso</option>
+          <option value="San Joaquín ">San Joaquín</option>
+          <option value="Sede Viña del Mar">Sede Viña del Mar</option>
+        </select>
+
 
         <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Crear Evento</button>
       </form>

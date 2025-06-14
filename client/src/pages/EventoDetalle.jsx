@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import eventos from '../data/eventosData';
 
 export default function EventoDetalle() {
@@ -44,6 +44,8 @@ export default function EventoDetalle() {
             <tr>
               <td className="py-2 font-medium text-gray-700">Lugar</td>
               <td className="py-2 text-gray-800">{evento.lugar}</td>
+              <td className="py-2 text-gray-800">{evento.Campus}</td>
+              
             </tr>
           </tbody>
         </table>
@@ -77,6 +79,16 @@ export default function EventoDetalle() {
             Inscribirse
           </button>
         </form>
+      </div>
+           
+
+      <div className="text-center mb-8">
+        <Link
+          to="/"
+          className="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500"
+        >
+          Regresar a la página principal
+        </Link>
       </div>
     </div>
   );
