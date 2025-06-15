@@ -76,6 +76,45 @@ const eventos = [
       tipo: "Otro",
       modalidad: "Presencial",
       Campus: "Sede Viña del Mar"
+    },
+    {
+      id: 7,
+      titulo: "Charla “Infraestructura y bienestar urbano”",
+      fecha: "16/06/2025",
+      imagen: "Charla-Arquitectura-819x1024.jpg",
+      enlace: "/evento/7",
+      descripcion: `La Universidad Técnica Federico Santa María, a través de su Departamento de Arquitectura, les invita cordialmente a participar de la charla “Infraestructura y bienestar urbano”, instancia que abordará el rol de la infraestructura en el desarrollo de las ciudades y su impacto en la calidad de vida de las personas. Esta actividad se realizará el lunes 16 de junio, a las 15:00 horas, en el Teatro Aula Magna del Campus San Joaquín.`,
+      hora: "15:00",
+      lugar: "Teatro Aula Magna",
+      tipo: "Otro",
+      modalidad: "Presencial",
+      Campus: "San Joaquín"
+    },
+    {
+      id: 8,
+      titulo: "Lanzamiento de “Cuánticas: la fuerza del cambio”",
+      fecha: "17/06/2025",
+      imagen: "cuantico1.jpg",
+      enlace: "/evento/8",
+      descripcion: `La Universidad Técnica Federico Santa María, a través de su Departamento de Física, les invita cordialmente a participar del lanzamiento de “Cuánticas: la fuerza del cambio”, una iniciativa que busca acompañar, orientar e impulsar a las estudiantes de carreras STEM del Departamento de Física. Esta actividad se realizará el martes 17 de junio de 2025, a las 12:30 horas, en la sala E300 del Campus Casa Central Valparaíso.`,
+      hora: "12:30",
+      lugar: "Sala E300",
+      tipo: "Investigación",
+      modalidad: "Presencial",
+      Campus: "Casa Central Valparaíso"
+    },
+    {
+      id: 9,
+      titulo: "Ciclo de charlas “Participación y liderazgo femenino: desafíos para mujeres STEM”",
+      fecha: "12/06/2025",
+      imagen: "ciclo-de-charlas-participacion-y-liderazgo-femenino.jpg",
+      enlace: "/evento/9",
+      descripcion: `La Universidad Técnica Federico Santa María, a través de su Dirección de Género y en el marco del Proyecto Ciencia 2030, les invita cordialmente a participar del ciclo de charlas “Participación y liderazgo femenino: desafíos para mujeres STEM”, que busca reflexionar, desde una perspectiva teórico-práctica, sobre las condiciones de justicia social y epistémica que excluyen a las mujeres de áreas del conocimiento científico-tecnológico, promoviendo acciones colectivas para el cambio. En esta instancia exponen Pamela Soto, directora de Género USM, y Karla Arce, encargada institucional de la Dirección de Género. Esta actividad se realizará el miércoles 12 y 19 de junio de 2025, en la sala E300, del Campus Casa Central Valparaíso.`,
+      hora: "12:30",
+      lugar: "Sala E300",
+      tipo: "Otro",
+      modalidad: "Presencial",
+      Campus: "Casa Central Valparaíso"
     }
   ];
   
