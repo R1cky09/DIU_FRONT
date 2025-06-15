@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import eventos from '../data/eventosData';
 import EventCard from '../components/EventCard';
 
@@ -69,6 +70,11 @@ export default function Eventos() {
           <p className="text-center text-gray-500">No se encontraron eventos.</p>
         )}
       </section>
+      <div className="max-w-7xl mx-auto px-6 text-center mb-8">
+        <Link to="/" className="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500">
+          Regresar a la página principal
+        </Link>
+      </div>
     </div>
   );
 }

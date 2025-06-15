@@ -112,10 +112,101 @@ const eventos = [
       descripcion: `La Universidad Técnica Federico Santa María, a través de su Dirección de Género y en el marco del Proyecto Ciencia 2030, les invita cordialmente a participar del ciclo de charlas “Participación y liderazgo femenino: desafíos para mujeres STEM”, que busca reflexionar, desde una perspectiva teórico-práctica, sobre las condiciones de justicia social y epistémica que excluyen a las mujeres de áreas del conocimiento científico-tecnológico, promoviendo acciones colectivas para el cambio. En esta instancia exponen Pamela Soto, directora de Género USM, y Karla Arce, encargada institucional de la Dirección de Género. Esta actividad se realizará el miércoles 12 y 19 de junio de 2025, en la sala E300, del Campus Casa Central Valparaíso.`,
       hora: "12:30",
       lugar: "Sala E300",
-      tipo: "Otro",
+      tipo: "Cultura",
       modalidad: "Presencial",
       Campus: "Casa Central Valparaíso"
-    }
+    },
+    {
+    id: 10,
+    titulo: "Seminario “Impactos ambientales de desaladoras por ósmosis inversa: metodologías y análisis”",
+    fecha: "17/06/2025",
+    imagen: "seminario_ambientales.jpg",
+    enlace: "/evento/10",
+    descripcion: `La Universidad Técnica Federico Santa María les invita cordialmente a participar del seminario “Impactos ambientales de desaladoras por ósmosis inversa: metodologías y análisis”, actividad de cierre del proyecto IDeA I+D ID23I10336: “IDRO: Evaluación y modelación de impactos ambientales de plantas desalinizadoras por ósmosis inversa”. Este encuentro abordará distintos enfoques metodológicos para evaluar el impacto ambiental, social y marino asociado a la desalinización, y contará con presentaciones de investigadoras e investigadores de diversas instituciones académicas.`,
+    hora: "14:30",
+    lugar: "Salón de actos del Edificio T",
+    tipo: "Investigación",
+    modalidad: "Presencial",
+    Campus: "Casa Central Valparaíso"
+  },
+  {
+    id: 11,
+    titulo: "Taller presencial de empleabilidad “Entrevista Laboral” Sede Viña del Mar",
+    fecha: "17/06/2025",
+    imagen: "empleabilidad.jpg",
+    enlace: "/evento/11",
+    descripcion: `La Universidad Técnica Federico Santa María, a través de su Dirección General de Vinculación con el Medio, les invita cordialmente a participar del taller presencial de empleabilidad “Entrevista Laboral”, instancia que entregará estrategias prácticas para prepararse y desenvolverse con éxito en procesos de selección profesionales.`,
+    hora: "12:30",
+    lugar: "",
+    tipo: "Otro",
+    modalidad: "Presencial",
+    Campus: "Sede Viña del Mar"
+  },
+  {
+    id: 12,
+    titulo: "Conferencia “Tendencias en regulación ambiental aplicables a inversiones. Nuevos desafíos que deben enfrentar los proyectos”",
+    fecha: "19/06/2025",
+    imagen: "Conferencia-tendencias-en-regulacion-ambiental-JUN.jpg",
+    enlace: "/evento/12",
+    descripcion: `La Universidad Técnica Federico Santa María les invita cordialmente a participar de la conferencia “Tendencias en regulación ambiental aplicables a inversiones. Nuevos desafíos que deben enfrentar los proyectos”, que será dictada por el Sr. Pablo Daud M.`,
+    hora: "11:00",
+    lugar: "",
+    tipo: "Investigación",
+    modalidad: "Online",
+    Campus: "Casa Central Valparaíso"
+  },
+  {
+    id: 13,
+    titulo: "Charla “Hacia una economía ética”",
+    fecha: "19/06/2025",
+    imagen: "economia_etica.jpg",
+    enlace: "/evento/13",
+    descripcion: `La Universidad Técnica Federico Santa María les invita cordialmente a participar de la charla “Hacia una economía ética”, que será dictada por Alfonso Salinas, presidente de la Asociación de Empresas Región de Valparaíso (ASIVA) y gerente de Estrategia y Desarrollo de GNL Quintero. Esta actividad es abierta a la comunidad universitaria y público interesado en la temática.`,
+    hora: "12:30",
+    lugar: "Salón de actos del Edificio T",
+    tipo: "Economia",
+    modalidad: "Presencial",
+    Campus: "Casa Central Valparaíso"
+  },
+    {
+    id: 14,
+    titulo: "Lanzamiento Premios Avonni",
+    fecha: "19/06/2025",
+    imagen: "Lanzamiento-premios-Avonni.jpg",
+    enlace: "/evento/14",
+    descripcion: `La Universidad Técnica Federico Santa María, a través de su Centro Avanzado de Ingeniería Eléctrica y Electrónica (AC3E), en colaboración con ForoInnovación, les invita cordialmente a participar del lanzamiento de los Premios Avonni Costamar Valparaíso, encuentro que reunirá a emprendedores, líderes regionales, investigadoras e investigadores y creadoras y creadores de soluciones que impactan, inspiran y abren caminos. El programa contempla palabras de bienvenida de Paula Bengolea, directora ejecutiva de ForoInnovación, y Óscar Solar, gerente general del AC3E; el pitch de Paulina Assmann, ganadora Avonni Soluciones y Servicios Digitales Entel 2024 y fundadora y directora ejecutiva de Sequre Quantum; y el panel “Mujer y salud: innovando el futuro”, moderado por la Dra. Pamela Guevara, subdirectora del AC3E.`,
+    hora: "10:00",
+    lugar: "Salón de eventos del Edificio A",
+    tipo: "Otro",
+    modalidad: "Presencial",
+    Campus: "Casa Central Valparaíso"
+  },
+  {
+    id: 15,
+    titulo: "Café & Física 2025 “Conversando con Ariel Norambuena Zamorano”",
+    fecha: "26/06/2025",
+    imagen: "arielnorambuena.jpg",
+    enlace: "/evento/15",
+    descripcion: `La Universidad Técnica Federico Santa María, a través de su Departamento de Física, les invita cordialmente a participar del encuentro Café & Física 2025 “Conversando con Ariel Norambuena Zamorano”, instancia en la que el académico del Departamento de Física compartirá su experiencia investigadora y dialogará con la comunidad sobre los desafíos actuales en su área de estudio.`,
+    hora: "16:05",
+    lugar: "Sala A-003",
+    tipo: "Ciencia",
+    modalidad: "Presencial",
+    Campus: "San Joaquín"
+  },
+  {
+    id: 16,
+    titulo: "Café & Física 2025 “Conversando con Fernando Sepúlveda”",
+    fecha: "26/06/2025",
+    imagen: "fernandosepulveda.jpg",
+    enlace: "/evento/16",
+    descripcion: `La Universidad Técnica Federico Santa María, a través de su Departamento de Física, les invita cordialmente a participar del encuentro Café & Física 2025 “Conversando con Fernando Sepúlveda”, instancia en la que el economista senior del Banco Central de Chile compartirá su experiencia y reflexionará sobre la relación entre la economía y las ciencias físicas.`,
+    hora: "16:05",
+    lugar: "Sala de conferencias Dr. Luciano Laroze (E300)",
+    tipo: "Ciencia",
+    modalidad: "Presencial",
+    Campus: "Casa Central Valparaíso"
+  }
   ];
   
   export default eventos;
