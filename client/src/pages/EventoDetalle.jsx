@@ -91,7 +91,7 @@ export default function EventoDetalle() {
                 <span className="inline-block w-4 h-4 bg-indigo-400 mr-2 rounded-full"></span>
                 <span><strong>Modalidad:</strong> {evento.modalidad}</span>
               </div>
-          </div>
+            </div>
           </div>
           {/* Sign-up Form */}
           <div className="border border-gray-200 rounded-lg p-6 shadow-sm bg-white">
@@ -119,18 +119,36 @@ export default function EventoDetalle() {
                 Inscribirse
               </button>
             </form>
+            {/* Social Media Icons */}
+            <div className="mt-4 flex justify-center space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                <FaFacebookF size={24} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-700">
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900">
+                <FaLinkedinIn size={24} />
+              </a>
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+                <FaTelegramPlane size={24} />
+              </a>
+              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-700">
+                <FaWhatsapp size={24} />
+              </a>
+            </div>
           </div>
         </aside>
       </div>
 
-      {/* Share Modal */}{/* Botón Regresar */}
-<div className="max-w-7xl mx-auto px-6 text-center mb-8">
-  <Link to="/" className="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500">
-    Regresar a la página principal
-  </Link>
-</div>
+      {/* Share Modal & Regresar Button */}
+      <div className="max-w-7xl mx-auto px-6 text-center mb-8">
+        <Link to="/" className="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500">
+          Regresar a la página principal
+        </Link>
+      </div>
 
-{showShareModal && (
+      {showShareModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-6 w-80 mx-4">
             <h3 className="text-lg font-semibold mb-4 text-gray-800">Compartir Evento</h3>
