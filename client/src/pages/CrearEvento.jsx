@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import eventos from '../data/eventosData';
+
 
 export default function CrearEvento() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ export default function CrearEvento() {
 
   return (
     <div className="max-w-3xl mx-auto mt-8 p-4 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-6">Crear Nuevo Evento (modo prueba)</h2>
+      <h2 className="text-2xl font-bold mb-6">Crear Nuevo Evento</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <input name="titulo" placeholder="Título del evento" onChange={handleChange} required className="w-full p-2 border rounded" />
@@ -72,6 +73,12 @@ export default function CrearEvento() {
 
         <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Crear Evento</button>
       </form>
+            <div className="text-center mb-8">
+        <Link to="/" className="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500">
+          Regresar a la página principal
+        </Link>
+      </div>
     </div>
+    
   );
 }

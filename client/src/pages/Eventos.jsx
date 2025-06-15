@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import eventos from '../data/eventosData';
 import EventCard from '../components/EventCard';
 
@@ -6,13 +6,25 @@ export default function Eventos() {
   const [search, setSearch] = useState('');
   const [tipo, setTipo] = useState('');
   const [modalidad, setModalidad] = useState('');
-  const [Campus, setCampus] = useState('');
+  const [campus, setCampus] = useState('');
 
-  const eventosFiltrados = eventos.filter(e =>
+  // Ordenar eventos por fecha (más reciente primero)
+  const eventosOrdenados = useMemo(() => {
+    return [...eventos].sort((a, b) => {
+      const [dayA, monthA, yearA] = a.fecha.split('/').map(Number);
+      const [dayB, monthB, yearB] = b.fecha.split('/').map(Number);
+      const dateA = new Date(yearA, monthA - 1, dayA);
+      const dateB = new Date(yearB, monthB - 1, dayB);
+      return dateB - dateA;
+    });
+  }, []);
+
+  // Filtrar eventos ya ordenados
+  const eventosFiltrados = eventosOrdenados.filter(e =>
     e.titulo.toLowerCase().includes(search.toLowerCase()) &&
     (tipo ? e.tipo === tipo : true) &&
     (modalidad ? e.modalidad === modalidad : true) &&
-    (Campus ? e.Campus === Campus : true)
+    (campus ? e.Campus === campus : true)
   );
 
   return (
@@ -40,7 +52,7 @@ export default function Eventos() {
           <option value="Online">Online</option>
           <option value="Presencial">Presencial</option>
         </select>
-        <select value={Campus} onChange={(e) => setCampus(e.target.value)} className="p-2 border rounded">
+        <select value={campus} onChange={(e) => setCampus(e.target.value)} className="p-2 border rounded">
           <option value="">Campus</option>
           <option value="Casa Central Valparaíso">Casa Central Valparaíso</option>
           <option value="San Joaquín">San Joaquín</option>
