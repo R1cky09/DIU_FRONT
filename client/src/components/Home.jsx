@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import eventos from '../data/eventosData';
 import EventCard from '../components/EventCard';
 
@@ -12,7 +13,10 @@ export default function Home() {
   // 3 eventos más antiguos para el carousel
   const antiguos = useMemo(() => {
     return eventos
-      .map(e => ({ ...e, dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })() }))
+      .map(e => ({
+        ...e,
+        dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })()
+      }))
       .sort((a, b) => a.dateObj - b.dateObj)
       .slice(0, 3);
   }, []);
@@ -21,7 +25,10 @@ export default function Home() {
   const recomendados = useMemo(() => {
     const hoy = new Date();
     return eventos
-      .map(e => ({ ...e, dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })() }))
+      .map(e => ({
+        ...e,
+        dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })()
+      }))
       .filter(e => e.dateObj >= hoy)
       .sort((a, b) => a.dateObj - b.dateObj)
       .slice(0, 3);
@@ -30,7 +37,10 @@ export default function Home() {
   // 3 novedades más recientes
   const novedades = useMemo(() => {
     return eventos
-      .map(e => ({ ...e, dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })() }))
+      .map(e => ({
+        ...e,
+        dateObj: (() => { const [d,m,y] = e.fecha.split('/').map(Number); return new Date(y, m-1, d); })()
+      }))
       .sort((a, b) => b.dateObj - a.dateObj)
       .slice(0, 3);
   }, []);
@@ -47,14 +57,15 @@ export default function Home() {
   const next = () => setCurrentIndex(i => (i + 1) % antiguos.length);
 
   // Filtrado de eventos
-  const filtrados = useMemo(() =>
-    eventos.filter(e =>
+  const filtrados = useMemo(
+    () => eventos.filter(e =>
       e.titulo.toLowerCase().includes(search.toLowerCase()) &&
       (tipo ? e.tipo === tipo : true) &&
       (modalidad ? e.modalidad === modalidad : true) &&
       (campus ? e.Campus === campus : true)
-    )
-  , [search, tipo, modalidad, campus]);
+    ),
+    [search, tipo, modalidad, campus]
+  );
 
   return (
     <div className="space-y-12">
@@ -73,9 +84,10 @@ export default function Home() {
                 <div>
                   <h3 className="text-3xl font-bold text-white">{e.titulo}</h3>
                   <p className="mt-1 text-sm text-gray-200 line-clamp-2">{e.descripcion}</p>
-                  <a href={e.enlace} className="mt-3 inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold py-2 px-4 rounded">
-                    Ver evento
-                  </a>
+                  <Link
+                    to={`/evento/${e.id}`}
+                    className="mt-3 inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold py-2 px-4 rounded"
+                  >Ver evento</Link>
                 </div>
               </div>
             </div>
