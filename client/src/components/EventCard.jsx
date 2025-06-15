@@ -84,9 +84,9 @@ function EventCard({ evento }) {
 
         <Link
           to={`/evento/${evento.id}`}
-          className="text-blue-600 hover:underline"
+          className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded px-4 py-2 text-center"
         >
-          Ver más →
+          Más detalles
         </Link>
       </div>
     </div>
