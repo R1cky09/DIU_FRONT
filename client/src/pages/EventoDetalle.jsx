@@ -120,22 +120,12 @@ export default function EventoDetalle() {
               </button>
             </form>
             {/* Social Media Icons */}
-            <div className="mt-4 flex justify-center space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <FaFacebookF size={24} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-700">
-                <FaTwitter size={24} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900">
-                <FaLinkedinIn size={24} />
-              </a>
-              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
-                <FaTelegramPlane size={24} />
-              </a>
-              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-700">
-                <FaWhatsapp size={24} />
-              </a>
+             <div className="mt-4 flex justify-center space-x-4">
+              <button onClick={() => compartirEn('Facebook')} className="text-blue-600 hover:text-blue-800"><FaFacebookF size={24} /></button>
+              <button onClick={() => compartirEn('Twitter')} className="text-cyan-500 hover:text-cyan-700"><FaTwitter size={24} /></button>
+              <button onClick={() => compartirEn('LinkedIn')} className="text-blue-700 hover:text-blue-900"><FaLinkedinIn size={24} /></button>
+              <button onClick={() => compartirEn('Telegram')} className="text-blue-400 hover:text-blue-600"><FaTelegramPlane size={24} /></button>
+              <button onClick={() => compartirEn('WhatsApp')} className="text-green-500 hover:text-green-700"><FaWhatsapp size={24} /></button>
             </div>
           </div>
         </aside>
